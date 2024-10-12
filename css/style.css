@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  /* colors */
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --grey-500: hsl(186, 15%, 59%);
+  --grey-900: hsl(187, 24%, 22%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* utilities */
+.container {
+  min-height: 100vh;
+  background: var(--green-200);
+  padding: 1.9rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+}
+
+.message {
+  display: none;
+  color: var(--red);
+  font-size: 14.999px;
+  letter-spacing: 0.3px;
+}
+
+/* flash style */
+.flash {
+  position: absolute;
+  left: 50%;
+  top: 1.5rem;
+  width: 22rem;
+  height: 6.6rem;
+  border-radius: 8px;
+  transform: translateX(-50%);
+  background: var(--grey-900);
+  color: var(--white);
+  padding: 1.5rem;
+}
+
+.flash__header {
+  padding-top: 0.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: bold;
+  font-size: 17.88px;
+}
+
+.flash__message {
+  padding-top: 0.5rem;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+}
+
+@media (min-width: 1024px) {
+  .flash {
+    top: 0.5rem;
+    width: 28rem;
+  }
+
+  .flash__message {
+    padding-top: 1rem;
+    font-size: 15px;
+  }
+}
+
+/* card */
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 738px;
+  margin: 0 auto;
+}
+
+.card--title {
+  letter-spacing: -1px;
+}
+
+/* form */
+.card--form {
+  padding-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.69rem;
+}
+
+.form__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.form__flex__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.form__input {
+  height: 3.2rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-900);
+  padding: 0 1.5rem 0.1rem 1.5rem;
+  font-size: 17px;
+  color: var(--grey-900);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.form__input:focus {
+  border: 1px solid var(--green-600);
+  outline: 1px solid var(--green-600);
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 8rem 1rem 8rem 1rem;
+  }
+  .card {
+    padding: 2.499rem;
+  }
+
+  .card--form {
+    gap: 1.65rem;
+  }
+
+  .form__flex {
+    flex-direction: row;
+    gap: 1.1rem;
+  }
+
+  .form__flex__inner {
+    flex: 1;
+  }
+}
+
+/* radio flex */
+
+.form__radio__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.09rem;
+}
+
+.form__label__input {
+  display: flex;
+  height: 3.2rem;
+  padding: 0 1.5rem 0 1.5rem;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid var(--grey-900);
+  gap: 0.9rem;
+  font-size: 17.777px;
+  cursor: pointer;
+}
+
+.form__label__input:has(.form__radio:checked) {
+  background: var(--green-200);
+  border: 1px solid var(--green-600);
+  outline: 1px solid var(--green-600);
+}
+
+.form__radio {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  accent-color: var(--green-600);
+}
+
+.form__radio__inner__flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .form__radio__inner__flex {
+    flex-direction: row;
+  }
+
+  .form__label__input {
+    flex: 1;
+  }
+}
+
+/* message */
+
+.form__textarea {
+  height: 14.9rem;
+  border-radius: 5px;
+  border: 1px solid var(--grey-900);
+  padding: 0.8rem 1.5rem 0.1rem 1.5rem;
+  font-size: 17px;
+  color: var(--grey-900);
+  letter-spacing: 0.2px;
+}
+
+.form__textarea {
+  border: 1px solid var(--green-600);
+  outline: 1px solid var(--green-600);
+}
+
+@media (min-width: 1024px) {
+  .form__textarea {
+    height: 6.5rem;
+  }
+}
+
+/* consent to being contacted */
+.form__label__checkbox {
+  display: flex;
+  align-items: center;
+  padding: 0.9rem 0 0 0.2rem;
+  gap: 1.3rem;
+  line-height: 23px;
+}
+
+.form__checkbox {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid var(--grey-900);
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.form__checkbox:checked {
+  background-color: var(--green-600);
+  border-color: var(--green-600);
+}
+
+.form__checkbox:checked::before {
+  content: "✓";
+  color: var(--white);
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  font-size: 0.8rem;
+}
+
+.form__button {
+  margin-top: 0.988rem;
+  height: 3.6rem;
+  border-radius: 5px;
+  background: var(--green-600);
+  color: var(--white);
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form__button:hover {
+  background: var(--grey-900);
+}

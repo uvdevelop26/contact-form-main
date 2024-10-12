@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!--  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- success message -->
+    <div class="flash hidden" id="flash">
+      <div class="flash__header">
+        <img src="assets/images/icon-success-check.svg" alt="success" />
+        <p>Message Sent!</p>
+      </div>
+      <p class="flash__message">Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+    <!-- card -->
+    <div class="card">
+
+      <h1 class="card--title">Contact Us</h1>
+
+      <form class="card--form" id="form">
+        <!-- first and last name -->
+        <div class="form__flex">
+          <div class="form__flex__inner">
+            <label for="first-name">First Name</label>
+            <input type="text" name="first-name" id="first-name" class="form__input" required />
+            <div class="message"></div>
+          </div>
+          <div class="form__flex__inner">
+            <label for="last-name"> Last Name</label>
+            <input type="text" name="last-name" id="last-name" class="form__input" required />
+            <div class="message"></div>
+          </div>
+        </div>
+        <!-- email -->
+        <div class="form__flex__inner">
+          <label for="email-address"> Email Address</label>
+          <input type="email" name="email" id="email-address" class="form__input" required />
+          <div class="message"></div>
+        </div>
+        <!-- radio buttons -->
+        <div class="form__radio__flex">
+          <label for=""> Query Type</label>
+          <div class="form__radio__inner__flex">
+            <label for="general-enquiry" class="form__label__input">
+              <input type="radio" name="query-type" id="general-enquiry" class="form__radio" required>
+              General Enquiry
+            </label>
+            <label for="support-request" class="form__label__input">
+              <input type="radio" name="query-type" id="support-request" class="form__radio">
+              Support Request
+            </label>
+          </div>
+          <div class="message"></div>
+        </div>
+        <!-- text area  -->
+        <div class="form__flex__inner">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" class="form__textarea" required></textarea>
+          <div class="message"></div>
+        </div>
+        <!-- consent -->
+        <div class="form__flex__inner">
+          <label for="consent" class="form__label__checkbox">
+            <input type="checkbox" name="consent" id="consent" class="form__checkbox" required>
+            I consent to being contacted by the team
+          </label>
+          <div class="message"></div>
+        </div>
+
+        <!-- button -->
+        <button type="button" class="form__button" id="button-submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 
+
+
+        To submit this form, please consent to being contacted
+  
+  This field is required
+
+ 
+  This field is required
+
+
+  Please enter a valid email address
+  This field is required
+
+
+
+ 
+  Please select a query type
+
+  
+  This field is required
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+<script src="./js/HandleErrors.js"></script>
+
+</html>
