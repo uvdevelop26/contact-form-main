@@ -22,13 +22,13 @@
   <div class="container">
 
     <!-- success message -->
-    <div class="flash hidden" id="flash">
+    <aside class="flash hidden" id="flash" id="flash" role="alert" aria-live="assertive">
       <div class="flash__header">
         <img src="assets/images/icon-success-check.svg" alt="success" />
         <p>Message Sent!</p>
       </div>
       <p class="flash__message">Thanks for completing the form. We'll be in touch soon!</p>
-    </div>
+    </aside>
 
     <!-- card -->
     <div class="card">
@@ -39,50 +39,53 @@
         <!-- first and last name -->
         <div class="form__flex">
           <div class="form__flex__inner">
-            <label for="first-name">First Name</label>
-            <input type="text" name="first-name" id="first-name" class="form__input" required />
-            <div class="message"></div>
+            <label for="first-name">First Name *</label>
+            <input type="text" name="first-name" id="first-name" class="form__input" aria-label="First Name" required />
+            <div class="message" role="alert" aria-live="assertive"></div>
           </div>
           <div class="form__flex__inner">
-            <label for="last-name"> Last Name</label>
-            <input type="text" name="last-name" id="last-name" class="form__input" required />
-            <div class="message"></div>
+            <label for="last-name"> Last Name *</label>
+            <input type="text" name="last-name" id="last-name" class="form__input" aria-label="Last Name" required />
+            <div class="message" role="alert" aria-live="assertive"></div>
           </div>
         </div>
         <!-- email -->
         <div class="form__flex__inner">
-          <label for="email-address"> Email Address</label>
-          <input type="email" name="email" id="email-address" class="form__input" required />
-          <div class="message"></div>
+          <label for="email-address"> Email Address *</label>
+          <input type="email" name="email" id="email-address" class="form__input" aria-label="Email Address" required />
+          <div class="message" role="alert" aria-live="assertive"></div>
         </div>
         <!-- radio buttons -->
         <div class="form__radio__flex">
-          <label for=""> Query Type</label>
+          <label> Query Type *</label>
           <div class="form__radio__inner__flex">
             <label for="general-enquiry" class="form__label__input">
-              <input type="radio" name="query-type" id="general-enquiry" class="form__radio" required>
+              <input type="radio" name="query-type" id="general-enquiry" class="form__radio"
+                aria-label="General Enquiry" required>
               General Enquiry
             </label>
             <label for="support-request" class="form__label__input">
-              <input type="radio" name="query-type" id="support-request" class="form__radio">
+              <input type="radio" name="query-type" id="support-request" class="form__radio"
+                aria-label="Support Request">
               Support Request
             </label>
           </div>
-          <div class="message"></div>
+          <div class="message" role="alert" aria-live="assertive"></div>
         </div>
         <!-- text area  -->
         <div class="form__flex__inner">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" class="form__textarea" required></textarea>
-          <div class="message"></div>
+          <label for="message">Message *</label>
+          <textarea name="message" id="message" class="form__textarea" aria-label="text-area" required></textarea>
+          <div class="message" role="alert" aria-live="assertive"></div>
         </div>
         <!-- consent -->
         <div class="form__flex__inner">
           <label for="consent" class="form__label__checkbox">
-            <input type="checkbox" name="consent" id="consent" class="form__checkbox" required>
+            <input type="checkbox" name="consent" id="consent" class="form__checkbox" aria-label="Consent to the terms"
+              required>
             I consent to being contacted by the team
           </label>
-          <div class="message"></div>
+          <div class="message" role="alert" aria-live="assertive"></div>
         </div>
 
         <!-- button -->
@@ -90,34 +93,6 @@
       </form>
     </div>
   </div>
-
-  <!-- 
-
-
-        To submit this form, please consent to being contacted
-  
-  This field is required
-
- 
-  This field is required
-
-
-  Please enter a valid email address
-  This field is required
-
-
-
- 
-  Please select a query type
-
-  
-  This field is required
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 
 <script src="./js/HandleErrors.js"></script>

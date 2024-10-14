@@ -119,7 +119,6 @@ buttonSubmit.addEventListener('click', (e) => {
             submit = false;
         } else {
             clearErrorMessage(element);
-
         }
     });
 
@@ -128,5 +127,13 @@ buttonSubmit.addEventListener('click', (e) => {
         showFlashMessage();
     }
 
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('#form');
+    const elements = Array.from(form.elements).filter((element) => element.type !== 'button');
+
+    elements[0].focus();
 
 });
